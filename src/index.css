@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+body {
+  @apply antialiased dark:bg-gradient-to-tr bg-gradient-to-tr dark:from-[#1E46A3] dark:via-black dark:to-[#C12A23]  to-blue-400 from-[#C12A23] pt-4
+}
+}
