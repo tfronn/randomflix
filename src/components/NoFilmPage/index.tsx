@@ -10,7 +10,7 @@ export function NoFilmPage() {
           Parece que hoje não é dia de filme,<br></br> não encontramos nada :&#40;
         </h1>
       </div>
-      <div className="flex flex-col justify-center items-center dark:bg-transparent bg-zinc-200 bg-opacity-70 px-4 py-4 rounded-md mx-4 text-center">
+      <div className="flex flex-col justify-center items-center dark:bg-transparent bg-zinc-200 bg-opacity-50 hover:bg-opacity-60 px-4 py-4 rounded-md mx-4 text-center">
         <p className="text-lg lg:text-2xl 3xl:text-4xl mb-4 2xl:mb-12">
           Que tal aproveitar que não encontrou um filme e conferir o GitHub do criador do site?
         </p>

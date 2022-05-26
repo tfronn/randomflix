@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 import { FilmPage } from "./components/FilmPage"
+import { Header } from "./components/Header"
 import { Loading } from "./components/Loading"
 import { NoFilmPage } from "./components/NoFilmPage"
 import { SearchButton } from "./components/SearchButton"
@@ -49,6 +50,7 @@ function App() {
     ?
     (
       <div className="flex flex-col items-center justify-center h-screen w-full overflow-auto scrollbar-thin scrollbar-track-transparent">
+      <Header />
       <SearchPage />
       <SearchButton onSearchButtonPress={() => setIsFilm(true)} onSearchButtonClick={handleSearch}/>
       </div>
