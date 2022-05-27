@@ -1,4 +1,5 @@
 import { IMG_URL } from "../../lib/api/api";
+import { FilmPoster } from "../FilmPoster";
 import { NoFilmOverview } from "../NoFilmOverview";
 import { NoFilmPoster } from "../NoFilmPoster";
 
@@ -22,8 +23,9 @@ export function FilmPage({pageFilmInfo}: FilmInfoProps) {
       </h1>
     </div>
     <div className="flex flex-col mx-auto sm:flex-row items-center px-4 py-2 md:w-4/5 md:mt-12 lg:mt-24 md:mb-24">
-      { filmInfo.filmPoster != null ? (<img src={`${IMG_URL}${filmInfo.filmPoster}`} alt={`Poster do filme ${filmInfo.filmName}`} className="h-auto w-24 sm:w-40 lg:w-48 xl:w-60 xs:w-32 sm:mr-4 md:mr-8 shadow-lg dark:shadow-none"/>) : <NoFilmPoster /> }
-        
+      {// filmInfo.filmPoster != null ? (<img src={filmInfo.filmPoster} alt={`Poster do filme ${filmInfo.filmName}`} className="h-auto w-24 sm:w-40 lg:w-48 xl:w-60 xs:w-32 sm:mr-4 md:mr-8 shadow-lg dark:shadow-none"/>) : <NoFilmPoster /> } 
+      filmInfo.filmPoster != null ? <FilmPoster filmPosterInfo={filmInfo.filmPoster}/> : <NoFilmPoster />
+      }
       <div className="flex flex-col items-center text-justify bg-zinc-200 bg-opacity-40 dark:bg-transparent rounded-md px-4 mt-2 hover:bg-opacity-70 max-w-7xl py-4 shadow-lg dark:shadow-none">
         <h1 className="font-display text-2xl 2xl:text-5xl font-semibold">
           {filmInfo.filmName}

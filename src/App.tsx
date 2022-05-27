@@ -7,14 +7,19 @@ import { Loading } from "./components/Loading"
 import { NoFilmPage } from "./components/NoFilmPage"
 import { SearchButton } from "./components/SearchButton"
 import { SearchPage } from "./components/SearchPage"
-import { API_KEY, BASE_URL, language } from "./lib/api/api"
+import { API_KEY, BASE_URL, IMG_URL, language } from "./lib/api/api"
+import { Image } from 'image-js'
 
 interface FilmProps {
   filmName?: string
   filmOverview?: string
-  filmPoster?: string
+  filmPoster?: string | null
   filmFailed?: string 
   }
+
+interface ImageProps {
+  image: string | ArrayBuffer | Uint8Array
+}
 
 function App() {
   const [isFilm, setIsFilm] = useState(false)
@@ -34,9 +39,16 @@ function App() {
       .then(response => response.data)
       const filmName = film.original_title
       const filmOverview = film.overview
-      const filmPoster = film.poster_path
-      
+      const filmPath = film.poster_path
+      if (filmPath === null) {
+        let filmPoster = null
+        setFilmInfo({filmName, filmOverview, filmPoster})
+      } else {
+      let filmPoster = await axios
+      .get(`${IMG_URL}${filmPath}`)
+      .then(response => response.request.responseURL)    
       setFilmInfo({filmName, filmOverview, filmPoster})
+    }
       setIsLoadingFilm(false)
     } 
     catch(response) {
@@ -44,7 +56,7 @@ function App() {
       setFilmInfo({filmFailed})
     }
   }
-  
+
   return (
   <>       
    <Header />
