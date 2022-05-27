@@ -8,7 +8,7 @@ import { NoFilmPage } from "./components/NoFilmPage"
 import { SearchButton } from "./components/SearchButton"
 import { SearchPage } from "./components/SearchPage"
 import { API_KEY, BASE_URL, IMG_URL, language } from "./lib/api/api"
-import { Image } from 'image-js'
+
 
 interface FilmProps {
   filmName?: string
