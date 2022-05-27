@@ -25,7 +25,7 @@ function App() {
   const [isFilm, setIsFilm] = useState(false)
   const [filmInfo, setFilmInfo] = useState<FilmProps>({} as FilmProps)
   const [isLoadingFilm, setIsLoadingFilm] = useState(false)
-  
+
   function generateRandomFilmId(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1) + min)  
   }

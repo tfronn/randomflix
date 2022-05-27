@@ -4,7 +4,7 @@ export function NoFilmPage() {
   return (
     <div className="text-zinc-800 dark:text-zinc-200 font-display">
       <div className="text-center mx-4">
-        <h1 className="font-bold text-xl sm:text-2xl md:text-4xl 3xl:text-8xl mt-12 mb-4 3xl:mb-60">
+        <h1 className="font-bold text-xl sm:text-2xl md:text-3xl 3xl:text-8xl mt-12 mb-4 3xl:mb-60">
           Parece que hoje não é dia de filme,<br></br> não encontramos nada :&#40;
         </h1>
       </div>
@@ -23,7 +23,7 @@ export function NoFilmPage() {
         </a>
       </div>
       <div className="flex-col md:mt-20 text-center">
-        <h1 className="font-bold text-xl sm:text-2xl md:text-4xl 3xl:text-8xl mb-2 mt-4 sm:mt-12">
+        <h1 className="font-bold text-xl sm:text-2xl md:text-3xl 3xl:text-8xl mb-2 mt-4 sm:mt-12">
           Quer tentar a sorte outra vez? <br></br>
         </h1>
         <p className="text-xl md:text-2xl mb-0 2xl:mb-12">Clique Novamente</p>

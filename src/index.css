@@ -4,6 +4,6 @@
 
 @layer components {
 body {
-  @apply antialiased dark:bg-gradient-to-tr bg-gradient-to-tr dark:from-[#1E46A3] dark:via-black dark:to-[#C12A23]  to-blue-400 from-[#C12A23] pt-4
+  @apply antialiased w-screen h-auto scroll-smooth scrollbar-thin scrollbar-track-transparent dark:bg-gradient-to-tr bg-gradient-to-tr dark:from-[#1E46A3] dark:via-black dark:to-[#C12A23]  to-blue-400 from-[#C12A23]
 }
 }
