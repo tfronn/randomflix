@@ -14,7 +14,7 @@ export function SearchButton({onSearchButtonClick, onSearchButtonPress}: SearchB
         <p className="font-display 3xl:text-2xl">Encontrar filme</p>
       </button>
     </div>
-    <p className="font-display text-center 3xl:text-2xl hidden sm:flex dark:text-zinc-200 text-zinc-800">
+    <p className="font-display text-center text-lg lg:text-xl xl:text-2xl 3xl:text-4xl hidden sm:flex dark:text-zinc-200 text-zinc-800">
       Clique em "Encontrar Filme" que traremos informações de alguns filmes para você assistir hoje.
     </p>
   </div>

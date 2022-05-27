@@ -46,13 +46,13 @@ function App() {
   }
   
   return (
-  <>
+  <>       
+   <Header />
+   <DarkModeSwitch />
     {isFilm === false
     ?
     (
       <div className="flex flex-col items-center justify-center h-screen w-full overflow-auto scrollbar-thin scrollbar-track-transparent">
-        <Header />
-        <DarkModeSwitch />
         <SearchPage />
         <SearchButton onSearchButtonPress={() => setIsFilm(true)} onSearchButtonClick={handleSearch}/>
       </div>
@@ -64,21 +64,15 @@ function App() {
       <div className="flex flex-col items-center justify-center h-screen w-full overflow-auto scrollbar-thin scrollbar-track-transparent">
         { isLoadingFilm === false ? <Loading /> :
         <>
-          <Header />
-          <DarkModeSwitch />
           <NoFilmPage />
           <SearchButton onSearchButtonClick={handleSearch} onSearchButtonPress={() => setIsFilm(true)}/>
         </>
         }
-
-        
       </div>
       ) : (
       <div className="flex flex-col items-center justify-center h-screen w-full overflow-auto scrollbar-thin scrollbar-track-transparent pt-12">
         { isLoadingFilm === true ? <Loading /> :
         <>
-          <Header />
-          <DarkModeSwitch />
           <FilmPage pageFilmInfo={filmInfo}/>
           <SearchButton onSearchButtonClick={handleSearch} onSearchButtonPress={() => setIsFilm(true)}/>
         </>
