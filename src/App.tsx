@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState } from "react"
+import { DarkModeSwitch } from "./components/DarkModeSwitch"
 import { FilmPage } from "./components/FilmPage"
 import { Header } from "./components/Header"
 import { Loading } from "./components/Loading"
@@ -50,9 +51,10 @@ function App() {
     ?
     (
       <div className="flex flex-col items-center justify-center h-screen w-full overflow-auto scrollbar-thin scrollbar-track-transparent">
-      <Header />
-      <SearchPage />
-      <SearchButton onSearchButtonPress={() => setIsFilm(true)} onSearchButtonClick={handleSearch}/>
+        <Header />
+        <DarkModeSwitch />
+        <SearchPage />
+        <SearchButton onSearchButtonPress={() => setIsFilm(true)} onSearchButtonClick={handleSearch}/>
       </div>
     )
     :
@@ -62,8 +64,10 @@ function App() {
       <div className="flex flex-col items-center justify-center h-screen w-full overflow-auto scrollbar-thin scrollbar-track-transparent">
         { isLoadingFilm === false ? <Loading /> :
         <>
-        <NoFilmPage />
-        <SearchButton onSearchButtonClick={handleSearch} onSearchButtonPress={() => setIsFilm(true)}/>
+          <Header />
+          <DarkModeSwitch />
+          <NoFilmPage />
+          <SearchButton onSearchButtonClick={handleSearch} onSearchButtonPress={() => setIsFilm(true)}/>
         </>
         }
 
@@ -73,6 +77,8 @@ function App() {
       <div className="flex flex-col items-center justify-center h-screen w-full overflow-auto scrollbar-thin scrollbar-track-transparent pt-12">
         { isLoadingFilm === true ? <Loading /> :
         <>
+          <Header />
+          <DarkModeSwitch />
           <FilmPage pageFilmInfo={filmInfo}/>
           <SearchButton onSearchButtonClick={handleSearch} onSearchButtonPress={() => setIsFilm(true)}/>
         </>

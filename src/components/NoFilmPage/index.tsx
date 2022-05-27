@@ -1,10 +1,8 @@
 import { FaGithub } from 'react-icons/fa'
-import { Header } from "../Header";
 
 export function NoFilmPage() {
   return (
     <div className="text-zinc-800 dark:text-zinc-200 font-display">
-      <Header />
       <div className="text-center mx-4">
         <h1 className="font-bold text-xl sm:text-2xl md:text-4xl 3xl:text-8xl mt-12 mb-4 3xl:mb-60">
           Parece que hoje não é dia de filme,<br></br> não encontramos nada :&#40;
