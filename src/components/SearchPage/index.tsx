@@ -41,6 +41,7 @@ export function SearchPage() {
       if (filmPath === null) {
         let filmPoster = null
         setFilmInfo({filmName, filmOverview, filmPoster})
+        setTimeout(() => setIsLoadingFilm(false), 300) 
       } else {
       let filmPoster = await axios
       .get(`${IMG_URL}${filmPath}`)
