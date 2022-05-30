@@ -8,13 +8,13 @@
 
   
 
-<a href="https://rocketflix-beta.vercel.app/">Teste o Rocketflix aqui</a>
+<a href="https://rocketflix-beta.vercel.app/">Teste o Randomflix aqui</a>
 
 </div>
 
   
 
-<h1  align="center">Rocketflix</h1>
+<h1  align="center">Randomflix</h1>
 
   
 
@@ -42,7 +42,7 @@ ___
 
 <h4 align="center">
 
-🚧 Rocketflix 🚀 Em construção... 🚧
+🚧 Randomflix 🚀 Em construção... 🚧
 
 </h4>
 
