@@ -26,7 +26,7 @@ export function SearchPage() {
   }
   
   async function handleSearch() {
-    const randomFilm = generateRandomFilmId(1, 10000)
+    const randomFilm = generateRandomFilmId(1, 100000)
     setIsLoadingFilm(true)
     try {
       
@@ -46,9 +46,8 @@ export function SearchPage() {
       .get(`${IMG_URL}${filmPath}`)
       .then(response => response.request.responseURL)    
       setFilmInfo({filmName, filmOverview, filmPoster})
+      }
       setTimeout(() => setIsLoadingFilm(false), 300) 
-      
-      } 
     } 
     catch(response) {
       setTimeout(() => setIsLoadingFilm(false), 300)
